@@ -1,27 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Cleaning Tool</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh; /* ใช้ความสูงเต็มของหน้าต่าง */
-            overflow: hidden; /* ซ่อน scrollbar */
-        }
-        iframe {
-            border: none; /* ไม่มีกรอบ */
-            width: 100vw; /* ความกว้างเต็มหน้าจอ */
-            height: 100vh; /* ความสูงเต็มหน้าจอ */
-        }
-    </style>
+    <script
+	type="module"
+	src="https://gradio.s3-us-west-2.amazonaws.com/4.42.0/gradio.js"
+    ></script>
 </head>
 <body>
-    <iframe
-        src="https://poramad-data-cleaning-tool.hf.space"
-        frameborder="0"
-    ></iframe>
+    <gradio-app src="https://poramad-data-cleaning-tool.hf.space>
 </body>
 </html>
