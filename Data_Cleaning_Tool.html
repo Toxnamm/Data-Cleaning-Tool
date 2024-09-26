@@ -6,14 +6,23 @@
         type="module"
         src="https://gradio.s3-us-west-2.amazonaws.com/4.42.0/gradio.js"
     ></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        iframe {
+            width: 100%;
+            height: 100vh; /* เปลี่ยนขนาด iframe ให้เต็มความสูงของหน้าจอ */
+            border: none; /* ไม่ให้มีกรอบ */
+            overflow: auto; /* ให้สามารถเลื่อนดูได้ */
+        }
+    </style>
 </head>
 <body>
     <iframe
         src="https://poramad-data-cleaning-tool.hf.space"
-        frameborder="0"
-        width="850"
-        height="450"
+        scrolling="yes" <!-- เพิ่มคุณสมบัตินี้ -->
     ></iframe>
 </body>
 </html>
-
