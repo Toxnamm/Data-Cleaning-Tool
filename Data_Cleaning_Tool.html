@@ -10,19 +10,31 @@
         body {
             margin: 0;
             padding: 0;
-            overflow: auto; /* ให้หน้าเว็บเลื่อนเมื่อมีเนื้อหามาก */
+            overflow: hidden; /* Prevent scrolling on the main page */
         }
         iframe {
             width: 100%;
-            height: 500px; /* กำหนดความสูงของ iframe */
-            border: none; /* ไม่ให้มีกรอบ */
+            border: none; /* Remove border */
         }
     </style>
+    <script>
+        function adjustIframeHeight(iframe) {
+            iframe.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+        }
+
+        window.onload = function() {
+            const iframe = document.getElementById('data-cleaning-iframe');
+            iframe.onload = function() {
+                adjustIframeHeight(iframe);
+            };
+        };
+    </script>
 </head>
 <body>
     <iframe
+        id="data-cleaning-iframe"
         src="https://poramad-data-cleaning-tool.hf.space"
-        scrolling="yes" <!-- ทำให้สามารถเลื่อนใน iframe ได้ -->
+        scrolling="yes"
     ></iframe>
 </body>
 </html>
