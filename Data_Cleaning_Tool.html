@@ -10,19 +10,19 @@
         body {
             margin: 0;
             padding: 0;
+            overflow: auto; /* ให้หน้าเว็บเลื่อนเมื่อมีเนื้อหามาก */
         }
         iframe {
             width: 100%;
-            height: 100vh; /* เปลี่ยนขนาด iframe ให้เต็มความสูงของหน้าจอ */
+            height: 500px; /* กำหนดความสูงของ iframe */
             border: none; /* ไม่ให้มีกรอบ */
-            overflow: auto; /* ให้สามารถเลื่อนดูได้ */
         }
     </style>
 </head>
 <body>
     <iframe
         src="https://poramad-data-cleaning-tool.hf.space"
-        scrolling="yes" <!-- เพิ่มคุณสมบัตินี้ -->
+        scrolling="yes" <!-- ทำให้สามารถเลื่อนใน iframe ได้ -->
     ></iframe>
 </body>
 </html>
